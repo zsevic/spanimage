@@ -5,7 +5,7 @@ module.exports=function(grunt){
 		uglify:{
 			dist:{
 				files:{
-				'injected.min.js':['html2canvas.js','canvas2image.js','injected.js']
+				'dist/js/injected.min.js':['src/js/html2canvas.js','src/js/canvas2image.js','src/js/injected.js']
 				}
 			}
 		}

@@ -1,7 +1,7 @@
 {
   "name": "spanimage",
-  "version": "1.0.0",
-  "description": "Spanimage ===",
+  "version": "1.0.1",
+  "description": "Chrome extension that will download selected part of the page as image",
   "main": "background.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

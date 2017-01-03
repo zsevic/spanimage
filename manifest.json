@@ -19,6 +19,6 @@
         "activeTab"
     ],
 	"web_accessible_resources":[
-		"injected.min.js"
+		"dist/js/injected.min.js"
 	]
 }
