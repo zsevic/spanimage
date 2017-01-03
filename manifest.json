@@ -1,7 +1,7 @@
 {
     "name": "Spanimage",
     "description": "This extension will download selected part of the page as image",
-    "version": "1.0.0",
+    "version": "1.0.1",
 	"manifest_version":2,
 	"background":{
 		"scripts":["background.js"]
@@ -11,12 +11,14 @@
         	"<all_urls>"
         ],
         "js": [
-        "html2canvas.js",
-        "canvas2image.js",
-        "script.js"]
+        	"script.js"
+		]
     }],
 	"permissions": [
         "contextMenus",
         "activeTab"
-    ]
+    ],
+	"web_accessible_resources":[
+		"injected.min.js"
+	]
 }

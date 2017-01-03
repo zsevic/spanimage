@@ -5,7 +5,7 @@ Chrome extension that will download selected part of the page as image
 ---
 
 ### User stories
-* I can right-click on any part of the webpage and choose the option to download it as an image
+* I can select any text on the page and after right-click I can choose the option to download it as an image
 
 ### Installation
 * Clone repository to your local machine or download it as zip file and extract it

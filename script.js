@@ -1,15 +1,13 @@
-function convertAndDownload(e){
-    e.preventDefault();
-    html2canvas(e.target.parentNode,{
-        onrendered:function(canvas){
-            document.removeEventListener('contextmenu',convertAndDownload);
-            return Canvas2Image.saveAsPNG(canvas);
-        }
-    });
+function injectScript(file,node){
+	var body=document.getElementsByTagName(node)[0];
+	var script=document.createElement('script');
+	script.setAttribute('type','text/javascript');
+	script.setAttribute('src',file);
+	body.appendChild(s);
 }
 
 chrome.extension.onMessage.addListener(function(message,sender,callback){
 	if(message.do=="span2image"){
-        document.addEventListener('contextmenu',convertAndDownload);
+        injectScript(chrome.extension.getURL('injected.min.js'),'body');
 	}
 });

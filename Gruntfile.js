@@ -1,0 +1,14 @@
+module.exports=function(grunt){
+	require("load-grunt-tasks")(grunt);
+	grunt.initConfig({
+		pkg:grunt.file.readJSON('package.json'),
+		uglify:{
+			dist:{
+				files:{
+				'injected.min.js':['html2canvas.js','canvas2image.js','injected.js']
+				}
+			}
+		}
+	});
+	grunt.registerTask('default',['uglify']);
+};
