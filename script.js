@@ -1,13 +1,13 @@
-function injectScript(file,node){
+function injectScript(file,node,counter){	
 	var body=document.getElementsByTagName(node)[0];
+	if(counter!==1){	
+		body.removeChild(body.lastChild);
+	}
 	var script=document.createElement('script');
-	script.setAttribute('type','text/javascript');
-	script.setAttribute('src',file);
+	script.src=file;
 	body.appendChild(script);
 }
 
 chrome.extension.onMessage.addListener(function(message,sender,callback){
-	if(message.do=="span2image"){
-        injectScript(chrome.extension.getURL('dist/js/injected.min.js'),'body');
-	}
+	injectScript(chrome.extension.getURL('dist/js/injected.min.js'), 'body', message.counter);
 });
