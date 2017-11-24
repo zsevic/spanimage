@@ -1,6 +1,6 @@
 {
     "name": "Spanimage",
-    "description": "This extension will download selected part of the page as image",
+    "description": "Chrome extension that will download selected part of the page as an image",
     "version": "1.0.1",
 	"manifest_version":2,
 	"background":{
