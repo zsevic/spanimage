@@ -1,24 +1,28 @@
 {
     "name": "Spanimage",
     "description": "Chrome extension that will download selected part of the page as an image",
-    "version": "1.0.1",
-	"manifest_version":2,
-	"background":{
-		"scripts":["background.js"]
-	},
-    "content_scripts": [{
-        "matches": [
-        	"<all_urls>"
-        ],
-        "js": [
-        	"script.js"
-		]
-    }],
-	"permissions": [
+    "version": "2.0.0",
+    "manifest_version": 2,
+    "background": {
+        "scripts": [
+            "src/background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "script.js"
+            ]
+        }
+    ],
+    "permissions": [
         "contextMenus",
         "activeTab"
     ],
-	"web_accessible_resources":[
-		"dist/js/injected.min.js"
-	]
+    "web_accessible_resources": [
+        "dist/injected.js"
+    ]
 }

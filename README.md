@@ -12,5 +12,6 @@
 
 ### :wrench: Setup
     git clone https://github.com/zsevic/spanimage.git
-    npm install
-    grunt
+    cd spanimage
+    yarn
+    yarn build
